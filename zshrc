@@ -1,5 +1,6 @@
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/heroku/bin:$HOME/.rvm/gems/ruby-1.9.3-p327/bin:$HOME/.rvm/gems/ruby-1.9.3-p327@global/bin:$HOME/.rvm/rubies/ruby-1.9.3-p327/bin:$HOME/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$HOME/.rvm/bin
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . “$HOME/.rvm/scripts/rvm”
 #
 # Explicitly configured $PATH variable
@@ -12,7 +13,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="xiong-chiamiov-plus"
+ZSH_THEME="rajesh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -44,18 +45,6 @@ if [ -f $HOME/.profile ]; then
     source $HOME/.profile  # Read Mac .profile, if present.
 fi
 
-# Shell Aliases
-## Git Aliases
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
-alias got='git '
-alias get='git '
 
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
