@@ -1,6 +1,5 @@
 #!/bin/bash
 ############################
-# .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
@@ -8,7 +7,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim zshrc oh-my-zsh private "    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -16,6 +15,8 @@ files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # li
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 echo "...done"
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/tmp
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"

@@ -119,3 +119,9 @@ set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 colorscheme railscasts
 call pathogen#infect()
+execute pathogen#infect()
+
+" Backups & Files
+set backup                     " Enable creation of backup file.
+set backupdir=~/.vim/backups " Where backups will go.
+set directory=~/.vim/tmp     " Where temporary files will go.

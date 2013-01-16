@@ -2,5 +2,8 @@ oh-my-zsh
 oh-my-zsh/*
 vim/vim
 vim/.netrwhist
+vim/backups
+vim/tmp
+vim/.netrwhist
 chef/
 private
