@@ -7,3 +7,8 @@ vim/tmp
 vim/.netrwhist
 chef/
 private
+/vim/.netrwhist
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
