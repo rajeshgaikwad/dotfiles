@@ -1,4 +1,4 @@
-execute pathogen#infect()
+"execute pathogen#infect()
 set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -117,8 +117,8 @@ set smarttab              " use tabs at the start of a line, spaces" elsewhere
 set nowrap                " don't wrap text
 
 set t_Co=256              " enable 256-color mode.
-syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme railscasts
+"syntax enable             " enable syntax highlighting (previously syntax on).
+"colorscheme railscasts
 
 " Backups & Files
 set backup                     " Enable creation of backup file.
@@ -129,17 +129,17 @@ set directory=~/.vim/tmp     " Where temporary files will go.
 set viminfo^=!
 "
 " " Minibuffer Explorer Settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
 "
 
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 "
 "" Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
+"let g:rails_default_file='config/database.yml'
 
 " " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
