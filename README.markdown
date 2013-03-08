@@ -10,8 +10,10 @@ Please feel free to use/copy/steal whatever you see here because I've done the s
 
     ## Shell dotfiles
 
-    This doesn't include any dotfiles for shells.Therefore it integrates well with zsh/tcsh/bash.
+    Please install zsh before installing this
+    git clone https://github.com/rajeshgaikwad/dotfiles.git dotfiles
+    cd dotfiles
+    install_dotfiles.sh
     Personally, I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh) and therefore run this command after bootstrapping.
 
-        curl https://raw.github.com/rajeshgaikwad/oh-my-zsh/master/tools/install.sh | sh
 
