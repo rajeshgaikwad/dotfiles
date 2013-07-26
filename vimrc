@@ -163,3 +163,12 @@ set laststatus=2  " Always show status line.
 " " gvim specific
 " set mousehide  " Hide mouse after chars typed
 " set mouse=a  " Mouse in all modes
+
+
+" Relative line numbers
+set rnu
+"
+" " Code folding
+set foldmethod=indent
+set foldnestmax=2
+set foldlevel=1
