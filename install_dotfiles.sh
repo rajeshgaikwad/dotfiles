@@ -18,6 +18,9 @@ echo "...done"
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/tmp
 
+git submodule init
+git submodule update
+
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
 cd $dir
