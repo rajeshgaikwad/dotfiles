@@ -17,6 +17,10 @@ mkdir -p $olddir
 echo "...done"
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/tmp
+# Install Inconsolata font
+mkdir ~/.fonts
+#cd ~/.fonts
+wget -P ~/.fonts http://www.levien.com/type/myfonts/Inconsolata.otf
 
 git submodule init
 git submodule update
