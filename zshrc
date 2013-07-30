@@ -1,13 +1,11 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#PATH=$PATH:/usr/local/heroku/bin:$HOME/.rvm/gems/ruby-1.9.3-p327/bin:$HOME/.rvm/gems/ruby-1.9.3-p327@global/bin:$HOME/.rvm/rubies/ruby-1.9.3-p327/bin:$HOME/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$HOME/.rvm/bin
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . “$HOME/.rvm/scripts/rvm”
-#rvm use ruby-1.9.3-p327 --default
-#
-# Explicitly configured $PATH variable
-#PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+#JAVA
+JAVA_HOME=~/jdk1.7.0_25
+export JAVA_HOME
+PATH=$JAVA_HOME/bin:$PATH
 
-# Path to your oh-my-zsh configuration.
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -19,14 +17,6 @@ ZSH_THEME="rajesh"
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
