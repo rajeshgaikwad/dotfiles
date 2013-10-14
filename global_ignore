@@ -53,3 +53,5 @@ results
 
 npm-debug.log
 node_modules
+#OS X
+.DS_Store
