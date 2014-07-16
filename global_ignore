@@ -41,7 +41,6 @@ newrelic_agent.log
 lib-cov
 *.seed
 *.log
-*.csv
 *.dat
 *.out
 *.pid
