@@ -1,10 +1,9 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 #JAVA
-JAVA_HOME=~/jdk1.7.0_25
+JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export JAVA_HOME
-PATH=$JAVA_HOME/bin:$PATH
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
+PATH=/usr/local/share/npm/bin:$PATH
 
 ZSH=$HOME/.oh-my-zsh
 
@@ -16,7 +15,6 @@ ZSH_THEME="rajesh"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
-
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -36,7 +34,6 @@ if [ -f $HOME/.profile ]; then
     source $HOME/.profile  # Read Mac .profile, if present.
 fi
 
-
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
     find . -exec grep -l $1 {} \;
@@ -51,3 +48,15 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="$PATH:/usr/local/heroku/bin"
+
+#export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+export LANG
+export LC_ALL
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export HBASE_HOME=/usr/local/Cellar/hbase/0.98.0/libexec/
+export HADOOP=/usr/local/Cellar/hadoop121/1.2.1/libexec/
+export PIG_CLASSPATH=/usr/local/Cellar/hadoop121/1.2.1/libexec/conf/:$HBASE_HOME/libexec/conf/hbase-site.xml:$HBASE_HOME/libexec/lib/zookeeper-3.4.5.jar:$HBASE_HOME/libexec/lib/guava-12.0.1.jar:$HBASE_HOME/libexec/lib/protobuf-java-2.5.0.jar
+PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
