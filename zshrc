@@ -47,16 +47,16 @@ if [ -f /usr/bin/vim ]; then
 fi
 
 ### Added by the Heroku Toolbelt
-export PATH="$PATH:/usr/local/heroku/bin"
+export PATH=$PATH:/usr/local/heroku/bin
 
-#export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 LANG=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 export LANG
 export LC_ALL
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export HBASE_HOME=/usr/local/Cellar/hbase/0.98.0/libexec/
 export HADOOP=/usr/local/Cellar/hadoop121/1.2.1/libexec/
 export PIG_CLASSPATH=/usr/local/Cellar/hadoop121/1.2.1/libexec/conf/:$HBASE_HOME/libexec/conf/hbase-site.xml:$HBASE_HOME/libexec/lib/zookeeper-3.4.5.jar:$HBASE_HOME/libexec/lib/guava-12.0.1.jar:$HBASE_HOME/libexec/lib/protobuf-java-2.5.0.jar
-PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
+export PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
