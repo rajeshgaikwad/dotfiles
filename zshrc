@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(aws git rails ruby heroku brew coffee node npm rvm sbt scala)
+plugins=(git rails ruby heroku brew coffee node npm rvm sbt scala)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,7 +55,7 @@ export LANG
 export LC_ALL
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export HBASE_HOME=/usr/local/Cellar/hbase/0.98.0/libexec/
+export HBASE_HOME=/usr/local/Cellar/hbase/0.98.4/libexec/
 export HADOOP=/usr/local/Cellar/hadoop121/1.2.1/libexec/
 export PIG_CLASSPATH=/usr/local/Cellar/hadoop121/1.2.1/libexec/conf/:$HBASE_HOME/libexec/conf/hbase-site.xml:$HBASE_HOME/libexec/lib/zookeeper-3.4.5.jar:$HBASE_HOME/libexec/lib/guava-12.0.1.jar:$HBASE_HOME/libexec/lib/protobuf-java-2.5.0.jar
 export PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
