@@ -2,6 +2,7 @@
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export GOPATH=$HOME/go
+export GOROOT=`go env GOROOT`
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
 PATH=/usr/local/share/npm/bin:$PATH
