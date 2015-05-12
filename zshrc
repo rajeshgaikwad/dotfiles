@@ -7,8 +7,12 @@ export GOROOT=`go env GOROOT`
 export PATH=$PATH:$GOPATH/bin
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-export PATH=$PATH:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
-PATH=/usr/local/share/npm/bin:$PATH
+export PATH=$PATH:/Users/rajesh/Library/Android/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
+export PATH=/usr/local/share/npm/bin:$PATH
+
+
+echo 'export PATH=$PATH:/Users/[yourusername]/android-sdks/platform-tools/' >> ~/.bash_profile
+
 
 ZSH=$HOME/.oh-my-zsh
 
