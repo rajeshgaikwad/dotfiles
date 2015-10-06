@@ -8,8 +8,8 @@ export PATH=$PATH:$GOPATH/bin
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export ANDROID_HOME="/Users/rajesh/Library/Android/sdk"
-export ANDROID_TOOLS="/Users/rajesh/Library/Android/sdk/tools/"
-export ANDROID_PLATFORM_TOOLS="/Users/rajesh/Library/Android/sdk/platform-tools/"
+export ANDROID_TOOLS="/Users/rajesh/Library/Android/sdk/tools"
+export ANDROID_PLATFORM_TOOLS="/Users/rajesh/Library/Android/sdk/platform-tools"
 PATH=$PATH:$ANDROID_HOME:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS
 
 #export PATH=$PATH:/Users/rajesh/Library/Android/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
