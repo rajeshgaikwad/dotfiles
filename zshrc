@@ -1,6 +1,6 @@
 #JAVA
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
-export JAVA_HOME="`/usr/libexec/java_home -v '1.7*'`"
+export JAVA_HOME="`/usr/libexec/java_home -v '1.8*'`"
 export PATH=$JAVA_HOME/bin:$PATH
 export GOPATH=$HOME/go
 export GOROOT=`go env GOROOT`
@@ -77,3 +77,9 @@ export HADOOP=/usr/local/Cellar/hadoop121/1.2.1/libexec/
 export PIG_CLASSPATH=/usr/local/Cellar/hadoop121/1.2.1/libexec/conf/:$HBASE_HOME/libexec/conf/hbase-site.xml:$HBASE_HOME/libexec/lib/zookeeper-3.4.5.jar:$HBASE_HOME/libexec/lib/guava-12.0.1.jar:$HBASE_HOME/libexec/lib/protobuf-java-2.5.0.jar
 export PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/Rajesh/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/Rajesh/google-cloud-sdk/completion.zsh.inc'
