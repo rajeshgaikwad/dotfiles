@@ -26,7 +26,7 @@ I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh)
    ```
   xcode-select --install                                                                                                
    ```
-  Install Java 1.7, Download from oracle site 
+  brew install Caskroom/cask/java 
 
   Install Node.js
    ```
@@ -35,6 +35,12 @@ I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh)
   nvm install iojs
   nvm alias default v0.12.2   
    ```
+  Install Google cloud sdk
+
+   ```
+  curl https://sdk.cloud.google.com | bash
+   ```
+  
   Install VirtualBox, Android Studio, Genymotion ,Heroku ToolBelt
 
    ```
