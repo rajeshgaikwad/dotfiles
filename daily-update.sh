@@ -1,1 +1,1 @@
-brew update && brew upgrade --all    
+ brew update && brew upgrade --all && brew cleanup && brew prune
