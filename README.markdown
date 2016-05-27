@@ -1,10 +1,8 @@
-# Rajesh's dotfiles
+# Dotfiles
 
 ## About
 
-These include some helpful shortcuts and settings 
-
-I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh) 
+These include some helpful shortcuts and settings and uses [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh) 
 
 
 
@@ -30,10 +28,8 @@ I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh)
 
   Install Node.js
    ```
-  nvm install 0.10
-  nvm install 0.12
-  nvm install iojs
-  nvm alias default v0.12.2   
+  nvm install 6
+  nvm alias default 6   
    ```
   Install Google cloud sdk
 
@@ -53,7 +49,7 @@ I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh)
 
 
    ```
-  brew install hg cabal-install mercurial go kafka zookeeper siege ghc mysql apache-spark awscli gpg htop optipng imagemagick  protobuf lynx neo4j sbt scala pig   redis mongodb cassandra  hadoop  hive 
+  brew install hg cabal-install mercurial go kafka zookeeper siege ghc mysql apache-spark awscli gpg htop optipng imagemagick  protobuf lynx neo4j sbt scala pig redis mongodb cassandra hadoop hive 
 
 
   ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
@@ -75,17 +71,12 @@ I use [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh)
 
   Reboot
 
+## Shell dotfiles
 
-
-
-
-
-
-    ## Shell dotfiles
-
-    Please install zsh before installing this
+  If not on mac Please install zsh before installing this
+  ```
     git clone git@github.com:rajeshgaikwad/dotfiles.git dotfiles
     cd dotfiles
     ./install_dotfiles.sh
-
+  ```
 
