@@ -44,7 +44,11 @@ These include some helpful shortcuts and settings and uses [my own fork of oh-my
 
 
    ```
-  brew install hg cabal-install mercurial go kafka zookeeper siege ghc mysql apache-spark awscli gpg htop optipng imagemagick  protobuf lynx neo4j sbt scala pig redis mongodb cassandra hadoop hive 
+  brew install ab hg cabal-install gcc go kafka zookeeper postgresql ghc mysql apache-spark awscli  htop  imagemagick  sbt scala redis mongodb jq cassandra
+  brew install  pig  hadoop hive 
+  brew install protobuf lynx neo4j  siege  kafka  mercurial gpg optipng
+
+
 
 
   ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
