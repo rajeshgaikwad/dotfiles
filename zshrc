@@ -10,6 +10,12 @@ source $(brew --prefix nvm)/nvm.sh
 export ANDROID_HOME="/Users/rajesh/Library/Android/sdk"
 export ANDROID_TOOLS="/Users/rajesh/Library/Android/sdk/tools"
 export ANDROID_PLATFORM_TOOLS="/Users/rajesh/Library/Android/sdk/platform-tools"
+
+if which pyspark > /dev/null; then
+  export SPARK_HOME="/usr/local/Cellar/apache-spark/1.6.1/libexec/"
+  #export PYSPARK_SUBMIT_ARGS="--packages org.postgresql:postgresql:9.4.1208,TargetHolding:pyspark-cassandra:0.3.5,databricks:spark-sklearn:0.2.0 --master local[*] pyspark-shell"
+fi
+
 PATH=$PATH:$ANDROID_HOME:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS
 
 #export PATH=$PATH:/Users/rajesh/Library/Android/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
@@ -77,9 +83,66 @@ export HADOOP=/usr/local/Cellar/hadoop121/1.2.1/libexec/
 export PIG_CLASSPATH=/usr/local/Cellar/hadoop121/1.2.1/libexec/conf/:$HBASE_HOME/libexec/conf/hbase-site.xml:$HBASE_HOME/libexec/lib/zookeeper-3.4.5.jar:$HBASE_HOME/libexec/lib/guava-12.0.1.jar:$HBASE_HOME/libexec/lib/protobuf-java-2.5.0.jar
 export PATH=$PATH:/usr/local/Cellar/hadoop121/1.2.1/bin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+###-begin-npm-completion-###
+#
+# npm command completion script
+#
+# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+#
+
+if type complete &>/dev/null; then
+  _npm_completion () {
+    local words cword
+    if type _get_comp_words_by_ref &>/dev/null; then
+      _get_comp_words_by_ref -n = -n @ -w words -i cword
+    else
+      cword="$COMP_CWORD"
+      words=("${COMP_WORDS[@]}")
+    fi
+
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           npm completion -- "${words[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  complete -o default -F _npm_completion npm
+elif type compdef &>/dev/null; then
+  _npm_completion() {
+    local si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 npm completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef _npm_completion npm
+elif type compctl &>/dev/null; then
+  _npm_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       npm completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K _npm_completion npm
+fi
+###-end-npm-completion-###
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/Rajesh/google-cloud-sdk/path.zsh.inc'
+if [ -f '/Users/Rajesh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Rajesh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-source '/Users/Rajesh/google-cloud-sdk/completion.zsh.inc'
+if [ -f '/Users/Rajesh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Rajesh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

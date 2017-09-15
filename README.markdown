@@ -18,26 +18,21 @@ These include some helpful shortcuts and settings and uses [my own fork of oh-my
   brew install wget nvm                                                                                                       
    ```
 
-  Install Firefox , Chrome (+ Postman), Xcode ,Sublime Text
 
   Open Xcode and Agree the Agreement
    ```
-  xcode-select --install                                                                                                
+  nvm install stable
    ```
-  brew install Caskroom/cask/java 
 
-  Install Node.js
-   ```
-  nvm install 6
-  nvm alias default 6   
-   ```
+  Install Firefox , Chrome (+ Postman), Xcode ,Sublime Text, Eclipse ,Visual Studio Code,VirtualBox, Android Studio, Genymotion ,Heroku ToolBelt
+
+
   Install Google cloud sdk
-
    ```
   curl https://sdk.cloud.google.com | bash
    ```
   
-  Install VirtualBox, Android Studio, Genymotion ,Heroku ToolBelt
+  Install ssh
 
    ```
   ssh-keygen -t rsa -C "mailId@example.com"
