@@ -2,7 +2,7 @@
 
 ## About
 
-These include some helpful shortcuts and settings and uses [my own fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh) 
+These include some helpful shortcuts and settings and uses [fork of oh-my-zsh](https://github.com/rajeshgaikwad/oh-my-zsh) 
 
 
 
@@ -24,7 +24,7 @@ These include some helpful shortcuts and settings and uses [my own fork of oh-my
   nvm install stable
    ```
 
-  Install Firefox , Chrome (+ Postman), Xcode ,Sublime Text, Eclipse ,Visual Studio Code,VirtualBox, Android Studio, Genymotion ,Heroku ToolBelt
+  Install Firefox , Chrome (+ Postman), Xcode ,Sublime Text, Eclipse ,Visual Studio Code,Docker, Android Studio, Genymotion ,Heroku ToolBelt
 
 
   Install Google cloud sdk
@@ -35,36 +35,35 @@ These include some helpful shortcuts and settings and uses [my own fork of oh-my
   Install ssh
 
    ```
-  ssh-keygen -t rsa -C "mailId@example.com"
+
+#  ssh-keygen -t rsa -C "mailId@one digial ad.com"
   ssh-add ~/.ssh/id_rsa
   pbcopy < ~/.ssh/id_rsa.pub
+ #  ssh-keygen -t rsa -C "mailId@g mail.com"
+
+ 
    ```
 
   Set Github account , Heroku, Assembla SSH keys, 
 
 
    ```
-  brew install ab hg cabal-install gcc go kafka zookeeper postgresql ghc mysql apache-spark awscli  htop  imagemagick  sbt scala redis mongodb jq cassandra
-  brew install  pig  hadoop hive 
-  brew install protobuf lynx neo4j  siege  kafka  mercurial gpg optipng
+brew install ab hg cabal-install gcc go kafka zookeeper postgresql ghc mysql apache-spark awscli  htop  imagemagick  sbt scala redis mongodb jq cassandra
+brew install heroku/brew/heroku
+brew install  pig  hadoop hive 
+brew install protobuf lynx neo4j  siege  kafka  mercurial gpg optipng
 
-
-
-
-  ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
-  ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
-  ln -sfv /usr/local/opt/cassandra/*.plist ~/Library/LaunchAgents
-  ln -sfv /usr/local/opt/zookeeper/*.plist ~/Library/LaunchAgents
-  ln -sfv /usr/local/opt/kafka/*.plist ~/Library/LaunchAgents
-  ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+brew services start cassandra
+brew services start mongodb
+brew services start redis
+brew services start postgresql
+brew services start mysql
+brew services start zookeeper
+brew services start kafka
    ```
   Run  
    ```
    aws configure
-   ```
-
-   Install Heroku Toolbelt from https://toolbelt.heroku.com/
-   ```
    heroku login
    ```
 
