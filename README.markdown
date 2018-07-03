@@ -48,7 +48,7 @@ These include some helpful shortcuts and settings and uses [fork of oh-my-zsh](h
 
 
    ```
-brew install ab hg cabal-install gcc go kafka zookeeper postgresql ghc mysql apache-spark awscli  htop  imagemagick  sbt scala redis mongodb jq cassandra
+brew install homebrew/apache/ab hg cabal-install gcc go kafka zookeeper postgresql ghc mysql apache-spark awscli  htop  imagemagick  sbt scala redis mongodb jq cassandra
 brew install heroku/brew/heroku
 brew install  pig  hadoop hive 
 brew install protobuf lynx neo4j  siege  kafka  mercurial gpg optipng
