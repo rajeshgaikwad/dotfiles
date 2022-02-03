@@ -1,6 +1,6 @@
 #JAVA
 #export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
-export JAVA_HOME="`/usr/libexec/java_home -v '1.8*'`"
+#export JAVA_HOME="`/usr/libexec/java_home -v '1.8*'`"
 export PATH=$JAVA_HOME/bin:$PATH
 export GOPATH=$HOME/go
 export GOROOT=`go env GOROOT`
@@ -10,7 +10,6 @@ source $(brew --prefix nvm)/nvm.sh
 export ANDROID_HOME="/Users/rajesh/Library/Android/sdk"
 export ANDROID_TOOLS="/Users/rajesh/Library/Android/sdk/tools"
 export ANDROID_PLATFORM_TOOLS="/Users/rajesh/Library/Android/sdk/platform-tools"
-
 if which pyspark > /dev/null; then
   export SPARK_HOME="/usr/local/Cellar/apache-spark/1.6.1/libexec/"
   #export PYSPARK_SUBMIT_ARGS="--packages org.postgresql:postgresql:9.4.1208,TargetHolding:pyspark-cassandra:0.3.5,databricks:spark-sklearn:0.2.0 --master local[*] pyspark-shell"
@@ -21,6 +20,7 @@ PATH=$PATH:$ANDROID_HOME:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS
 #export PATH=$PATH:/Users/rajesh/Library/Android/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140624/sdk/tools
 
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
 
 #echo 'export PATH=$PATH:/Users/rajesh/android-sdks/platform-tools/' >> ~/.bash_profile
@@ -44,7 +44,7 @@ export CLICOLOR=1
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby heroku brew coffee node npm rvm sbt scala)
+plugins=(git rails ruby heroku brew node npm rvm sbt scala kops kubectl yarn react-native aws )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,7 +142,31 @@ fi
 ###-end-npm-completion-###
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/path.zsh.inc'; fi
+#if [ -f '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/completion.zsh.inc'; fi
+#if [ -f '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/Rajesh/Project/Sites/to-be-deleted/google-cloud-sdk/completion.zsh.inc'; fi
+#
+#
+
+function iterm2_print_user_vars() {
+  iterm2_set_user_var badge $(dir_badges)
+}
+
+function dir_badges() {
+    while read directory badge || [[ -n "$directory" ]]
+    do
+        if [[ "$PWD"/ == $directory ]]; then
+            echo $badge
+            break
+        fi
+    done < ~/.badges
+}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
